@@ -147,13 +147,39 @@ Past Papers and Revision Materials.
 
 <input
 type="text"
+id="searchBox"
 placeholder="Search subjects..."
 style="
-padding:12px;
-width:300px;
+padding:14px;
+width:350px;
 border:none;
-border-radius:8px;
+border-radius:30px;
 font-size:16px;">
+
+<button onclick="searchSite()">Search</button>
+
+<script>
+function searchSite() {
+  let search =
+  document.getElementById("searchBox").value.toLowerCase();
+
+  if(search.includes("math")) {
+    window.location.href = "pastpapers.html";
+  }
+  else if(search.includes("paper")) {
+    window.location.href = "pastpapers.html";
+  }
+  else if(search.includes("o")) {
+    window.location.href = "olevel.html";
+  }
+  else if(search.includes("a")) {
+    window.location.href = "alevel.html";
+  }
+  else {
+    alert("No matching page found.");
+  }
+}
+</script>
 <a href="addmath.html" class="btn">
 Browse Papers
 </a>
